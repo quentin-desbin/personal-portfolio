@@ -133,7 +133,7 @@ export default {
             backgroundPosition: "-1000px 0",
           },
           "100%": {
-            backgroundPosition: "1000px 0",
+            backgroundPosition: "600px 0",
           },
         },
         "float": {
@@ -164,7 +164,7 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "glow": "glow 3s ease-in-out infinite",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "shimmer": "shimmer 3s linear infinite",
+        "shimmer": "shimmer 2s linear infinite",
         "float": "float 3s ease-in-out infinite",
         "bounce-slow": "bounce-slow 2s infinite",
       },

@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-[hsl(12,100%,70%)] bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-[hsl(12,100%,70%)] bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto] transform transition-all ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
         >
           Quentin Desbin
         </h1>
@@ -36,14 +36,14 @@ const Hero = () => {
         </h2>
 
         <p className={`text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          Passionné par la création d'expériences web, logiciels, mobiles modernes et performantes.<br />
-          Spécialisé dans <span className="text-[#42B883] font-semibold">Vue</span>, <span className="text-[#417e38] font-semibold">Node.js</span>, <span className="text-[#f89820] font-semibold">Java</span> et les technologies cloud.<br/>
+          Passionné par la création d'expériences web, logiciel ou mobile modernes et performantes.<br />
+          Spécialisé dans <span className="font-semibold">Vue</span>, <span className="font-semibold">Node.js</span>, <span className="font-semibold">Java</span> et les technologies cloud.<br/>
 					Je combine expertise technique et pédagogie pour partager mes connaissances.
         </p>
 
         <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <Button
-						onClick={() => window.open('https://quentin-desbin.fr/cv-quentin-desbin-2019-anon.pdf', '_blank')}
+						onClick={() => window.open('https://quentin-desbin.fr/cv-quentin-desbin-2025_anon.pdf', '_blank')}
 						size="lg" className="group relative overflow-hidden hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all duration-300">
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Download className="mr-2 h-5 w-5 relative z-10 group-hover:animate-bounce-slow" />

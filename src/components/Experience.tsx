@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building2, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import "./Experience.css";
 
 const Experience = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -13,9 +14,11 @@ const Experience = () => {
       period: "Septembre 2020 - Présent",
       responsibilities: [
         "Développement actif de la NextGen, team intégrations principalement et expert front/back en soutien dans d'autres teams",
-        "Développement actif de la v4, corrections de bugs, plugins",
+        "Développement actif de la v4, corrections de bugs, plugins/add-ons",
         "Création Team Intégrations et des socles techniques (refontes d'API, monitoring, cloud)",
-				"Participation aux choix arcchitecturaux et technologiques"
+				"Conception d'architectures",
+				"Participation aux différents comités techniques",
+				"Facilitateur transverse"
       ],
       technologies: ["Angular.JS", "Java (Quarkus et Spring)", "Node.js", "Vue", "Docker", "Kubernetes", "Elasticsearch", "Redis" ],
     },
@@ -85,7 +88,7 @@ const Experience = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-2xl mb-2 flex items-center gap-2 group-hover:text-primary transition-colors duration-300">
-                      <div className="p-2 rounded-lg bg-gradient-to-br from-secondary to-accent group-hover:animate-glow-pulse">
+                      <div className="p-2 rounded-lg default-shadow group-hover:animate-glow-pulse">
 												<img src={'/' + exp.logo} alt={exp.company + ' logo'} className="h-8 w-8 rounded object-contain text-background" />
                       </div>
                       {exp.company}

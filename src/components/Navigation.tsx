@@ -140,7 +140,7 @@ const Navigation = () => {
                 href={link.href}
                 className={`block text-sm font-medium transition-colors duration-300 ${
                   activeSection === link.href.replace("#", "")
-                    ? "text-white font-bold"
+                    ? "text-primary font-bold"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
                 onClick={() => setIsOpen(false)}

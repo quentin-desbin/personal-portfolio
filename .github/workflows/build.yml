@@ -26,26 +26,32 @@ jobs:
       with:
         node-version: '22'
         cache: 'npm'
-    - name: Clean dist folder
-      run: rm -rf dist
     - name: Use default npm registry
       run: rm package-lock.json && npm config set registry https://registry.npmjs.org/
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Build project
       run: npm run build
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: vite-build-artifact
+        path: dist
+        retention-days: 1
 
   deploy:
     name: "🚀 Deploy on production"
     runs-on: ubuntu-latest
     needs: build
     steps:
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: vite-build-artifact
+        path: .
     - name: Deploy on production
       uses: easingthemes/ssh-deploy@main
       with:
-        SCRIPT_BEFORE: |
-          echo "Déploiement sur le serveur distant"
-          rm -rf /var/www/quentin-desbin/*
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: ${{ secrets.SSH_REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.SSH_REMOTE_USER }}

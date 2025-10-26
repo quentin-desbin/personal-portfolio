@@ -87,7 +87,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -101,18 +101,26 @@ const Navigation = () => {
                 {link.name}
               </a>
             ))}
+
+						<button
+							onClick={handleThemeToggle}
+							className="px-2 py-1 text-sm rounded bg-card text-card-foreground border border-border shadow transition-colors"
+							aria-label="Toggle theme"
+						>
+							{theme === 'dark' ? '🌙' : '☀️'}
+						</button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+					<div className="md:hidden flex flex-row gap-2 items-center">
+						<button
+							className="md:hidden text-foreground"
+							onClick={() => setIsOpen(!isOpen)}
+							aria-label="Toggle menu"
+						>
+							{isOpen ? <X size={24} /> : <Menu size={24} />}
+						</button>
 
-					<div className="ml-4">
 						<button
 							onClick={handleThemeToggle}
 							className="px-2 py-1 text-sm rounded bg-card text-card-foreground border border-border shadow transition-colors"

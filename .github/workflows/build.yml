@@ -58,7 +58,7 @@ jobs:
         REMOTE_PORT: ${{ secrets.SSH_REMOTE_PORT }}
         SOURCE: '.'
         TARGET: '/var/www/quentindesbin'
-        ARGS: '-avz --delete'
+        ARGS: '-rlDvz --delete'
         EXCLUDE: ''
         SCRIPT_AFTER: |
           echo "Ajustement des permissions"
